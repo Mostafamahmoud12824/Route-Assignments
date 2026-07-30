@@ -1,0 +1,38 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card{ 
+    /* المفروض الاربعه كارت تاخد 25% علشان مقسمها بالتساوي وبعد كده بسيب 1% علشان extraspace */
+    width: 10%;
+    height : 200px;
+    display:inline-block;
+
+}
+.wraper{
+    text-align: center;
+}
+
+/* .men{
+    background-color: burlywood;
+} */
+.card h2 {
+    text-align: center;
+}
+.card img {
+    width: 100%;
+}
+.men.card{
+    background-color: chocolate;
+    color: burlywood;
+    width: 22%;
+    text-align: center;
+    /* display: inline-block; */
+    text-align: center;
+}
+h3 span{
+    color:aqua
+}
+h3{
+    color: brown;
+    font-family: inherit;
+}
