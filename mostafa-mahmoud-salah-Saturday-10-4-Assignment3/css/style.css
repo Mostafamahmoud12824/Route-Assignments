@@ -12,7 +12,6 @@
    10. Footer
    11. Responsive Adjustments
 ============================================================= */
-
 /* =============================================================
    1. CSS RESET & BASE
 ============================================================= */
@@ -297,7 +296,8 @@ p {
    6. HERO SECTION
 ============================================================= */
 .hero {
-  padding: 56px 0 80px;
+    margin-top: 120px;
+    padding: 120px 0 180px;
 }
 
 .hero-media {
@@ -895,9 +895,10 @@ p {
 }
 
 .footer-about-text {
-  color: #9a9aab;
-  font-size: 15px;
-  line-height: 24px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
   margin-bottom: 28px;
 }
 
