@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title >مدبّر | لوحة إدارة الأموال</title>
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="./images/fav-icon.png"
+    >
+  <!-- IBM Plex Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!-- bootstarp icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <nav class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-top">
+        <span class="brand-icon" aria-hidden="true">
+         <img src="images/coins.svg" alt="Coins" width="26" height="26">
+        </span>
+        <h1 class="sidebar__brand-name">مدبّر</h1>
+      </div>
+      <p class="sidebar__brand-subtitle">إدارة أموالك بذكاء</p>
+    </div>
+
+    <div class="sidebar__section">
+      <ul class="nav-list">
+        <li>
+          <a href="#" class="nav-item nav-item--active" aria-current="page">
+            <span class="nav-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+            </span>
+            <span class="nav-item__label">الصفحة الرئيسية</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-item">
+            <span class="nav-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+            </span>
+            <span class="nav-item__label">المعاملات</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-item">
+            <span class="nav-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 576 512" width="19" height="17" fill="currentColor"><path d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"/></svg>
+            </span>
+            <span class="nav-item__label">الميزانيات</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-item">
+            <span class="nav-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 576 512" width="20" height="18" fill="currentColor"><path d="M400 96l0 .7c-5.3-.4-10.6-.7-16-.7H256c-16.5 0-32.5 2.1-47.8 6c-.1-2-.2-4-.2-6c0-53 43-96 96-96s96 43 96 96zm-16 32c3.5 0 7 .1 10.4 .3c4.2 .3 8.4 .7 12.6 1.3C424.6 109.1 450.8 96 480 96h11.5c10.4 0 18 9.8 15.5 19.9l-13.8 55.2c15.8 14.8 28.7 32.8 37.5 52.9H544c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32H512c-9.1 12.1-19.9 22.9-32 32v64c0 17.7-14.3 32-32 32H416c-17.7 0-32-14.3-32-32V448H256v32c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32V416c-34.9-26.2-58.7-66.3-63.2-112H68c-37.6 0-68-30.4-68-68s30.4-68 68-68h4c13.3 0 24 10.7 24 24s-10.7 24-24 24H68c-11 0-20 9-20 20s9 20 20 20H99.2c12.1-59.8 57.7-107.5 116.3-122.8c12.9-3.4 26.5-5.2 40.5-5.2H384zm64 136a24 24 0 1 0 -48 0 24 24 0 1 0 48 0z"/></svg>
+            </span>
+            <span class="nav-item__label">المدخرات</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-item">
+            <span class="nav-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 384 512" width="15" height="20" fill="currentColor"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM64 80c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm128 72c8.8 0 16 7.2 16 16v17.3c8.5 1.2 16.7 3.1 24.1 5.1c8.5 2.3 13.6 11 11.3 19.6s-11 13.6-19.6 11.3c-11.1-3-22-5.2-32.1-5.3c-8.4-.1-17.4 1.8-23.6 5.5c-5.7 3.4-8.1 7.3-8.1 12.8c0 3.7 1.3 6.5 7.3 10.1c6.9 4.1 16.6 7.1 29.2 10.9l.5 .1 0 0 0 0c11.3 3.4 25.3 7.6 36.3 14.6c12.1 7.6 22.4 19.7 22.7 38.2c.3 19.3-9.6 33.3-22.9 41.6c-7.7 4.8-16.4 7.6-25.1 9.1V440c0 8.8-7.2 16-16 16s-16-7.2-16-16V422.2c-11.2-2.1-21.7-5.7-30.9-8.9l0 0c-2.1-.7-4.2-1.4-6.2-2.1c-8.4-2.8-12.9-11.9-10.1-20.2s11.9-12.9 20.2-10.1c2.5 .8 4.8 1.6 7.1 2.4l0 0 0 0 0 0c13.6 4.6 24.6 8.4 36.3 8.7c9.1 .3 17.9-1.7 23.7-5.3c5.1-3.2 7.9-7.3 7.8-14c-.1-4.6-1.8-7.8-7.7-11.6c-6.8-4.3-16.5-7.4-29-11.2l-1.6-.5 0 0c-11-3.3-24.3-7.3-34.8-13.7c-12-7.2-22.6-18.9-22.7-37.3c-.1-19.4 10.8-32.8 23.8-40.5c7.5-4.4 15.8-7.2 24.1-8.7V232c0-8.8 7.2-16 16-16z"/></svg>
+            </span>
+            <span class="nav-item__label">الفواتير الشهرية</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar__section">
+      <span class="sidebar__section-title">إجراءات سريعة</span>
+      <ul class="nav-list nav-list--quick">
+        <li>
+          <button type="button" class="quick-action">
+            <span class="quick-action__icon quick-action__icon--send" aria-hidden="true">
+              <svg viewBox="0 0 512 512" width="17" height="17" fill="currentColor"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+            </span>
+            <span>إرسال أموال</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="quick-action">
+            <span class="quick-action__icon quick-action__icon--add" aria-hidden="true">
+              <svg viewBox="0 0 448 512" width="16" height="18" fill="currentColor"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+            </span>
+            <span>إضافة أموال</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="quick-action">
+            <span class="quick-action__icon quick-action__icon--bill" aria-hidden="true">
+              <svg viewBox="0 0 384 512" width="15" height="19" fill="currentColor"><path d="M14 2.2C22.5-1.7 32.5-.3 39.6 5.8L80 40.4 120.4 5.8c9-7.7 22.3-7.7 31.2 0L192 40.4 232.4 5.8c9-7.7 22.3-7.7 31.2 0L304 40.4 344.4 5.8c7.1-6.1 17.1-7.5 25.6-3.6s14 12.4 14 21.8V488c0 9.4-5.5 17.9-14 21.8s-18.5 2.5-25.6-3.6L304 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L192 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L80 471.6 39.6 506.2c-7.1 6.1-17.1 7.5-25.6 3.6S0 497.4 0 488V24C0 14.6 5.5 6.1 14 2.2zM96 144c-8.8 0-16 7.2-16 16s7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96zM80 352c0 8.8 7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96c-8.8 0-16 7.2-16 16zM96 240c-8.8 0-16 7.2-16 16s7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96z"/></svg>
+            </span>
+            <span>دفع فاتورة</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="quick-action">
+            <span class="quick-action__icon quick-action__icon--invest" aria-hidden="true">
+              <svg viewBox="0 0 512 512" width="17" height="17" fill="currentColor"><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg>
+            </span>
+            <span>استثمار</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <div class="main">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header">
+      <div class="header__brand">
+        <div class="brand-icon brand-icon--sm" aria-hidden="true">
+        <img src="images/coins.svg" alt="Coins" width="26" height="26"">
+        </div>
+        <div>
+          <div class="header__title-row">
+            <h2>مدبّر</h2>
+            <span class="status-pill"><span class="status-dot" aria-hidden="true"></span>متصل</span>
+          </div>
+          <p class="header__subtitle">إدارة أموالك بذكاء</p>
+        </div>
+      </div>
+
+      <div class="header__actions">
+        <button type="button" class="icon-btn" aria-label="بحث">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button type="button" class="icon-btn icon-btn--notif" aria-label="الإشعارات، يوجد إشعارات جديدة">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="notif-badge" aria-hidden="true">3</span>
+        </button>
+        <button type="button" class="user-card">
+          <img class="user-card__avatar" src="images/image_2.jpg" alt="" width="40" height="40">
+          <span class="user-card__info">
+            <span class="user-card__name">سيف أسامة</span>
+            <span class="user-card__type">حساب مميز</span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===================== DASHBOARD CONTENT ===================== -->
+    <main class="dashboard-grid">
+
+      <!-- ---------- SUMMARY CARDS ---------- -->
+      <section class="summary-cards" aria-label="ملخص مالي">
+        <article class="summary-card">
+          <p class="summary-card__label">الرصيد الحالي</p>
+          <p class="summary-card__value">8,450 <span>جنيه</span></p>
+          <span class="trend trend--up">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            2.5%
+          </span>
+        </article>
+
+        <article class="summary-card">
+          <p class="summary-card__label">الدخل</p>
+          <p class="summary-card__value">15,000 <span>جنيه</span></p>
+          <span class="trend trend--up">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            8.2%
+          </span>
+        </article>
+
+        <article class="summary-card">
+          <p class="summary-card__label">المصروفات</p>
+          <p class="summary-card__value">10,000 <span>جنيه</span></p>
+          <span class="trend trend--down">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            1.2%
+          </span>
+        </article>
+      </section>
+
+      <!-- ---------- TRANSACTIONS + ACTIVITIES/BILLS ---------- -->
+      <div class="dashboard-main-grid">
+
+      <!-- ---------- RECENT TRANSACTIONS ---------- -->
+      <section class="card transactions" aria-labelledby="transactions-title">
+        <div class="card__header">
+          <h3 id="transactions-title">المعاملات الأخيرة</h3>
+          <button type="button" class="link-btn">عرض الكل</button>
+        </div>
+        <div class="table-scroll">
+          <table class="transactions-table">
+            <thead>
+              <tr>
+                <th scope="col">المعاملة</th>
+                <th scope="col">الفئة</th>
+                <th scope="col">التاريخ</th>
+                <th scope="col">الحالة</th>
+                <th scope="col">المبلغ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="tx-entity">
+                    <img class="avatar avatar--photo" src="images/image_3.jpg" alt="">
+                    <span>محمود التجار</span>
+                  </div>
+                </td>
+                <td><span class="badge badge--blue">دخل</span></td>
+                <td>14 أكتوبر 2025</td>
+                <td><span class="status status--done">مكتمل</span></td>
+                <td class="amount amount--positive">+350 جنيه</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tx-entity">
+                    <span class="avatar avatar--orange">
+                      <svg viewBox="0 0 448 512" width="14" height="16" fill="currentColor"><path d="M416 0C400 0 288 32 288 176V288c0 35.3 28.7 64 64 64h32V480c0 17.7 14.3 32 32 32s32-14.3 32-32V352 240 32c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7V480c0 17.7 14.3 32 32 32s32-14.3 32-32V255.6c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16V150.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8V16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"/></svg>
+                    </span>
+                    <span>مطعم Meat Moot</span>
+                  </div>
+                </td>
+                <td><span class="badge badge--orange">طعام</span></td>
+                <td>14 أكتوبر 2025</td>
+                <td><span class="status status--done">مكتمل</span></td>
+                <td class="amount amount--negative">-2,200 جنيه</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tx-entity">
+                    <span class="avatar avatar--dark">
+                      <svg viewBox="0 0 576 512" width="17" height="15" fill="currentColor"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                    </span>
+                    <span>مشتريات Amazon</span>
+                  </div>
+                </td>
+                <td><span class="badge badge--pink">تسوق</span></td>
+                <td>13 أكتوبر 2025</td>
+                <td><span class="status status--done">مكتمل</span></td>
+                <td class="amount amount--negative">-1,250 جنيه</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tx-entity">
+                    <img class="avatar avatar--photo" src="images/image_2.jpg" alt="">
+                    <span>عمر المهدي</span>
+                  </div>
+                </td>
+                <td><span class="badge badge--blue">فاتورة مقسمة</span></td>
+                <td>13 أكتوبر 2025</td>
+                <td><span class="status status--done">مكتمل</span></td>
+                <td class="amount amount--negative">-1,400 جنيه</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tx-entity">
+                    <img class="avatar avatar--photo" src="images/image_1.jpg" alt="">
+                    <span>محمد عوض</span>
+                  </div>
+                </td>
+                <td><span class="badge badge--blue">عمل</span></td>
+                <td>13 أكتوبر 2025</td>
+                <td><span class="status status--done">مكتمل</span></td>
+                <td class="amount amount--positive">+2,500 جنيه</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tx-entity">
+                    <span class="avatar avatar--purple">
+                      <svg viewBox="0 0 384 512" width="12" height="16" fill="currentColor"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM64 80c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm128 72c8.8 0 16 7.2 16 16v17.3c8.5 1.2 16.7 3.1 24.1 5.1c8.5 2.3 13.6 11 11.3 19.6s-11 13.6-19.6 11.3c-11.1-3-22-5.2-32.1-5.3c-8.4-.1-17.4 1.8-23.6 5.5c-5.7 3.4-8.1 7.3-8.1 12.8c0 3.7 1.3 6.5 7.3 10.1c6.9 4.1 16.6 7.1 29.2 10.9l.5 .1 0 0 0 0c11.3 3.4 25.3 7.6 36.3 14.6c12.1 7.6 22.4 19.7 22.7 38.2c.3 19.3-9.6 33.3-22.9 41.6c-7.7 4.8-16.4 7.6-25.1 9.1V440c0 8.8-7.2 16-16 16s-16-7.2-16-16V422.2c-11.2-2.1-21.7-5.7-30.9-8.9l0 0c-2.1-.7-4.2-1.4-6.2-2.1c-8.4-2.8-12.9-11.9-10.1-20.2s11.9-12.9 20.2-10.1c2.5 .8 4.8 1.6 7.1 2.4l0 0 0 0 0 0c13.6 4.6 24.6 8.4 36.3 8.7c9.1 .3 17.9-1.7 23.7-5.3c5.1-3.2 7.9-7.3 7.8-14c-.1-4.6-1.8-7.8-7.7-11.6c-6.8-4.3-16.5-7.4-29-11.2l-1.6-.5 0 0c-11-3.3-24.3-7.3-34.8-13.7c-12-7.2-22.6-18.9-22.7-37.3c-.1-19.4 10.8-32.8 23.8-40.5c7.5-4.4 15.8-7.2 24.1-8.7V232c0-8.8 7.2-16 16-16z"/></svg>
+                    </span>
+                    <span>محطة وقود Shell</span>
+                  </div>
+                </td>
+                <td><span class="badge badge--orange">مواصلات</span></td>
+                <td>12 أكتوبر 2025</td>
+                <td><span class="status status--pending">معلق</span></td>
+                <td class="amount amount--negative">-700 جنيه</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tx-entity">
+                    <span class="avatar avatar--purple">
+                      <img src="./images/كهرباء.svg" alt="">
+                    </span>
+                    <span>اشتراك Netflix</span>
+                  </div>
+                </td>
+                <td><span class="badge badge--orange">ترفيه</span></td>
+                <td>12 أكتوبر 2025</td>
+                <td><span class="status status--pending">مكتمل</span></td>
+                <td class="amount amount--negative">-450 جنيه</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tx-entity">
+                    <span class="avatar avatar--cyan">
+                      <svg viewBox="0 0 640 512" width="16" height="13" fill="currentColor"><path d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"/></svg>
+                    </span>
+                    <span>نادي FitLife</span>
+                  </div>
+                </td>
+                <td>
+                <span class="badge badge--pink">صحة<i class="bi bi-heart-pulse-fill"></i></span></td>
+                <td>11 أكتوبر 2025</td>
+                <td><span class="status status--done">مكتمل</span></td>
+                <td class="amount amount--negative">-500 جنيه</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="tx-entity">
+                    <span class="avatar avatar--cyan">
+                      <svg viewBox="0 0 640 512" width="16" height="13" fill="currentColor"><path d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"/></svg>
+                    </span>
+                    <span>كورس Jonas</span>
+                  </div>
+                </td>
+                <td><span class="badge badge--education"><i class="bi bi-book"></i>
+                 <span>تعليم</span></span></td>
+                <td>9 أكتوبر 2025</td>
+                <td><span class="status status--done">مكتمل</span></td>
+                <td class="amount amount--negative">-250 جنيه</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ---------- ACTIVITIES + BILLS COLUMN ---------- -->
+      <div class="dashboard-side-stack">
+
+      <!-- ---------- RECENT ACTIVITIES ---------- -->
+      <section class="card activities" aria-labelledby="activities-title">
+        <div class="card__header">
+          <h3 id="activities-title">الأنشطة الحديثة</h3>
+        </div>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <span class="activity-icon activity-icon--blue" aria-hidden="true">
+              <svg viewBox="0 0 640 512" width="20" height="16" fill="currentColor"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+            </span>
+            <div class="activity-body">
+              <p class="activity-title">إنشاء حساب توفير جديد</p>
+              <p class="activity-desc">تم إنشاء حساب توفير للأهداف بنجاح</p>
+              <span class="activity-time">منذ ساعة واحدة</span>
+            </div>
+          </li>
+          <li class="activity-item">
+            <span class="activity-icon activity-icon--purple" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+            </span>
+            <div class="activity-body">
+              <p class="activity-title">إضافة بطاقة جديدة</p>
+              <p class="activity-desc">تمت إضافة بطاقة Visa الجديدة ****2847</p>
+              <span class="activity-time">منذ 3 ساعات</span>
+            </div>
+          </li>
+          <li class="activity-item">
+            <span class="activity-icon activity-icon--green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <div class="activity-body">
+              <p class="activity-title">تحقيق هدف ادخار</p>
+              <p class="activity-desc">وصلت إلى 80% من هدف "رحلة الصيف"</p>
+              <span class="activity-time">منذ 5 ساعات</span>
+            </div>
+          </li>
+          <li class="activity-item">
+            <span class="activity-icon activity-icon--orange" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
+            </span>
+            <div class="activity-body">
+              <p class="activity-title">تنبيه ميزانية</p>
+              <p class="activity-desc">اقتربت من حد ميزانية "فواتير" لهذا الشهر</p>
+              <span class="activity-time">منذ يوم واحد</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ---------- MONTHLY BILLS ---------- -->
+      <section class="card bills" aria-labelledby="bills-title">
+        <div class="card__header">
+          <h3 id="bills-title">الفواتير الشهرية</h3>
+          <button type="button" class="link-btn">عرض الكل</button>
+        </div>
+        <ul class="bill-list">
+          <li class="bill-item">
+            <span class="bill-icon bill-icon--phone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            </span>
+            <div class="bill-body">
+              <p class="bill-name">هاتف</p>
+              <span class="bill-due">يستحق في 10 أيام</span>
+            </div>
+            <p class="bill-amount">290 جنيه</p>
+          </li>
+          <li class="bill-item">
+            <span class="bill-icon bill-icon--netflix" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4l8 16h4M4 20h4L16 4h4"/></svg>
+            </span>
+            <div class="bill-body">
+              <p class="bill-name">Netflix</p>
+              <span class="bill-due">يستحق في 15 يوم</span>
+            </div>
+            <p class="bill-amount">780 جنيه</p>
+          </li>
+          <li class="bill-item">
+            <span class="bill-icon bill-icon--electricity" aria-hidden="true">
+              <svg viewBox="0 0 448 512" width="15" height="17" fill="currentColor"><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z"/></svg>
+            </span>
+            <div class="bill-body">
+              <p class="bill-name">الكهرباء</p>
+              <span class="bill-due bill-due--urgent">يستحق في 3 أيام</span>
+            </div>
+            <p class="bill-amount">450 جنيه</p>
+          </li>
+          <li class="bill-item">
+            <span class="bill-icon bill-icon--internet" aria-hidden="true">
+              <svg viewBox="0 0 640 512" width="19" height="15" fill="currentColor"><path d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/></svg>
+            </span>
+            <div class="bill-body">
+              <p class="bill-name">الإنترنت</p>
+              <span class="bill-due">يستحق في 20 يوم</span>
+            </div>
+            <p class="bill-amount">350 جنيه</p>
+          </li>
+        </ul>
+      </section>
+
+      </div>
+
+      </div>
+
+      <!-- ---------- PAYMENT METHODS / INCOME &amp; ACCOUNTS / BUDGET ---------- -->
+      <div class="finance-columns">
+
+      <!-- ---------- PAYMENT METHODS ---------- -->
+      <section class="card payment-methods" aria-labelledby="payments-title">
+        <div class="card__header">
+          <h3 id="payments-title">وسائل الدفع</h3>
+          <button type="button" class="link-btn">إدارة</button>
+        </div>
+
+        <div class="payment-cards">
+
+          <!-- Interactive 3D Visa Card -->
+          <div class="credit-card-scene" tabindex="0" aria-label="بطاقة Visa، مرر الماوس لعرض الوجه الخلفي">
+            <div class="credit-card">
+              <div class="credit-card__face credit-card__face--front credit-card__face--visa">
+                <div class="credit-card__top">
+                  <span class="credit-card__brand" aria-hidden="true">
+                    <svg viewBox="0 0 576 512" width="42" height="37" fill="currentColor"><path d="M470.1 231.3s7.6 37.2 9.3 45H446c3.3-8.9 16-43.5 16-43.5-.2.3 3.3-9.1 5.3-14.9l2.8 13.4zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM152.5 331.2L215.7 176h-42.5l-39.3 106-4.3-21.5-14-71.4c-2.3-9.9-9.4-12.7-18.2-13.1H32.7l-.7 3.1c15.8 4 29.9 9.8 42.2 17.1l35.8 135h42.5zm94.4.2L272.1 176h-40.2l-25.1 155.4h40.1zm139.9-50.8c.2-17.7-10.6-31.2-33.7-42.3-14.1-7.1-22.7-11.9-22.7-19.2.2-6.6 7.3-13.4 23.1-13.4 13.1-.3 22.7 2.8 29.9 5.9l3.6 1.7 5.5-33.6c-7.9-3.1-20.5-6.6-36-6.6-39.7 0-67.6 21.2-67.8 51.4-.3 22.3 20 34.7 35.2 42.2 15.5 7.6 20.8 12.6 20.8 19.3-.2 10.4-12.6 15.2-24.1 15.2-16 0-24.6-2.5-37.7-8.3l-5.3-2.5-5.6 34.9c9.4 4.3 26.8 8.1 44.8 8.3 42.2.1 69.7-20.8 70-53zM528 331.4L495.6 176h-31.1c-9.6 0-16.9 2.8-21 12.9l-59.7 142.5H426s6.9-19.2 8.4-23.3H486c1.2 5.5 4.8 23.3 4.8 23.3H528z"/></svg>
+                  </span>
+                  <span class="credit-card__hologram" aria-hidden="true"></span>
+                </div>
+                <div class="credit-card__mid">
+                  <span class="credit-card__chip" aria-hidden="true"></span>
+                  <span class="credit-card__contactless" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8.5 11a5 5 0 0 1 0 7"/><path d="M12 8.5a9 9 0 0 1 0 12"/><path d="M15.5 6a13 13 0 0 1 0 17"/></svg>
+                  </span>
+                </div>
+                <p class="credit-card__number">4532&nbsp;&nbsp;••••&nbsp;&nbsp;••••&nbsp;&nbsp;••••</p>
+                <div class="credit-card__bottom">
+                  <div>
+                    <span class="credit-card__mini-label">حامل البطاقة</span>
+                    <span class="credit-card__holder">سيف أسامة</span>
+                  </div>
+                  <div>
+                    <span class="credit-card__mini-label">تنتهي</span>
+                    <span class="credit-card__holder">12/26</span>
+                  </div>
+                </div>
+              </div>
+              <div class="credit-card__face credit-card__face--back credit-card__face--visa">
+                <div class="credit-card__stripe" aria-hidden="true"></div>
+                <div class="credit-card__cvv-row">
+                  <span class="credit-card__signature" aria-hidden="true"></span>
+                  <div class="credit-card__cvv">
+                    <span class="credit-card__mini-label">CVV</span>
+                    <span>123</span>
+                  </div>
+                </div>
+                <p class="credit-card__disclaimer">هذه البطاقة صالحة للاستخدام من قبل حاملها فقط، ويُعد استخدامها إقرارًا بالموافقة على الشروط والأحكام الصادرة عن البنك المُصدر.</p>
+                <p class="credit-card__service">خدمة العملاء: 19700</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive 3D Mastercard -->
+          <div class="credit-card-scene" tabindex="0" aria-label="بطاقة Mastercard، مرر الماوس لعرض الوجه الخلفي">
+            <div class="credit-card">
+              <div class="credit-card__face credit-card__face--front credit-card__face--mastercard">
+                <div class="credit-card__top">
+                  <span class="credit-card__brand" aria-hidden="true">
+                    <svg viewBox="0 0 576 512" width="42" height="37" fill="currentColor"><path d="M482.9 410.3c0 6.8-4.6 11.7-11.2 11.7-6.8 0-11.2-5.2-11.2-11.7 0-6.5 4.4-11.7 11.2-11.7 6.6 0 11.2 5.2 11.2 11.7zm-310.8-11.7c-7.1 0-11.2 5.2-11.2 11.7 0 6.5 4.1 11.7 11.2 11.7 6.5 0 10.9-4.9 10.9-11.7-.1-6.5-4.4-11.7-10.9-11.7zm117.5-.3c-5.4 0-8.7 3.5-9.5 8.7h19.1c-.9-5.7-4.4-8.7-9.6-8.7zm107.8.3c-6.8 0-10.9 5.2-10.9 11.7 0 6.5 4.1 11.7 10.9 11.7 6.8 0 11.2-4.9 11.2-11.7 0-6.5-4.4-11.7-11.2-11.7zm105.9 26.1c0 .3.3.5.3 1.1 0 .3-.3.5-.3 1.1-.3.3-.3.5-.5.8-.3.3-.5.5-1.1.5-.3.3-.5.3-1.1.3-.3 0-.5 0-1.1-.3-.3 0-.5-.3-.8-.5-.3-.3-.5-.5-.5-.8-.3-.5-.3-.8-.3-1.1 0-.5 0-.8.3-1.1 0-.5.3-.8.5-1.1.3-.3.5-.3.8-.5.5-.3.8-.3 1.1-.3.5 0 .8 0 1.1.3.5.3.8.3 1.1.5s.2.6.5 1.1zm-2.2 1.4c.5 0 .5-.3.8-.3.3-.3.3-.5.3-.8 0-.3 0-.5-.3-.8-.3 0-.5-.3-1.1-.3h-1.6v3.5h.8V426h.3l1.1 1.4h.8l-1.1-1.3zM576 81v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V81c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM64 220.6c0 76.5 62.1 138.5 138.5 138.5 27.2 0 53.9-8.2 76.5-23.1-72.9-59.3-72.4-171.2 0-230.5-22.6-15-49.3-23.1-76.5-23.1-76.4-.1-138.5 62-138.5 138.2zm224 108.8c70.5-55 70.2-162.2 0-217.5-70.2 55.3-70.5 162.6 0 217.5zm-142.3 76.3c0-8.7-5.7-14.4-14.7-14.7-4.6 0-9.5 1.4-12.8 6.5-2.4-4.1-6.5-6.5-12.2-6.5-3.8 0-7.6 1.4-10.6 5.4V392h-8.2v36.7h8.2c0-18.9-2.5-30.2 9-30.2 10.2 0 8.2 10.2 8.2 30.2h7.9c0-18.3-2.5-30.2 9-30.2 10.2 0 8.2 10 8.2 30.2h8.2v-23zm44.9-13.7h-7.9v4.4c-2.7-3.3-6.5-5.4-11.7-5.4-10.3 0-18.2 8.2-18.2 19.3 0 11.2 7.9 19.3 18.2 19.3 5.2 0 9-1.9 11.7-5.4v4.6h7.9V392zm40.5 25.6c0-15-22.9-8.2-22.9-15.2 0-5.7 11.9-4.8 18.5-1.1l3.3-6.5c-9.4-6.1-30.2-6-30.2 8.2 0 14.3 22.9 8.3 22.9 15 0 6.3-13.5 5.8-20.7.8l-3.5 6.3c11.2 7.6 32.6 6 32.6-7.5zm35.4 9.3l-2.2-6.8c-3.8 2.1-12.2 4.4-12.2-4.1v-16.6h13.1V392h-13.1v-11.2h-8.2V392h-7.6v7.3h7.6V416c0 17.6 17.3 14.4 22.6 10.9zm13.3-13.4h27.5c0-16.2-7.4-22.6-17.4-22.6-10.6 0-18.2 7.9-18.2 19.3 0 20.5 22.6 23.9 33.8 14.2l-3.8-6c-7.8 6.4-19.6 5.8-21.9-4.9zm59.1-21.5c-4.6-2-11.6-1.8-15.2 4.4V392h-8.2v36.7h8.2V408c0-11.6 9.5-10.1 12.8-8.4l2.4-7.6zm10.6 18.3c0-11.4 11.6-15.1 20.7-8.4l3.8-6.5c-11.6-9.1-32.7-4.1-32.7 15 0 19.8 22.4 23.8 32.7 15l-3.8-6.5c-9.2 6.5-20.7 2.6-20.7-8.6zm66.7-18.3H408v4.4c-8.3-11-29.9-4.8-29.9 13.9 0 19.2 22.4 24.7 29.9 13.9v4.6h8.2V392zm33.7 0c-2.4-1.2-11-2.9-15.2 4.4V392h-7.9v36.7h7.9V408c0-11 9-10.3 12.8-8.4l2.4-7.6zm40.3-14.9h-7.9v19.3c-8.2-10.9-29.9-5.1-29.9 13.9 0 19.4 22.5 24.6 29.9 13.9v4.6h7.9v-51.7zm7.6-75.1v4.6h.8V302h1.9v-.8h-4.6v.8h1.9zm6.6 123.8c0-.5 0-1.1-.3-1.6-.3-.3-.5-.8-.8-1.1-.3-.3-.8-.5-1.1-.8-.5 0-1.1-.3-1.6-.3-.3 0-.8.3-1.4.3-.5.3-.8.5-1.1.8-.5.3-.8.8-.8 1.1-.3.5-.3 1.1-.3 1.6 0 .3 0 .8.3 1.4 0 .3.3.8.8 1.1.3.3.5.5 1.1.8.5.3 1.1.3 1.4.3.5 0 1.1 0 1.6-.3.3-.3.8-.5 1.1-.8.3-.3.5-.8.8-1.1.3-.6.3-1.1.3-1.4zm3.2-124.7h-1.4l-1.6 3.5-1.6-3.5h-1.4v5.4h.8v-4.1l1.6 3.5h1.1l1.4-3.5v4.1h1.1v-5.4zm4.4-80.5c0-76.2-62.1-138.3-138.5-138.3-27.2 0-53.9 8.2-76.5 23.1 72.1 59.3 73.2 171.5 0 230.5 22.6 15 49.5 23.1 76.5 23.1 76.4.1 138.5-61.9 138.5-138.4z"/></svg>
+                  </span>
+                </div>
+                <div class="credit-card__mid">
+                  <span class="credit-card__chip" aria-hidden="true"></span>
+                  <span class="credit-card__contactless" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8.5 11a5 5 0 0 1 0 7"/><path d="M12 8.5a9 9 0 0 1 0 12"/><path d="M15.5 6a13 13 0 0 1 0 17"/></svg>
+                  </span>
+                </div>
+                <p class="credit-card__number">8901&nbsp;&nbsp;••••&nbsp;&nbsp;••••&nbsp;&nbsp;••••</p>
+                <div class="credit-card__bottom">
+                  <div>
+                    <span class="credit-card__mini-label">حامل البطاقة</span>
+                    <span class="credit-card__holder">سيف أسامة</span>
+                  </div>
+                  <div>
+                    <span class="credit-card__mini-label">تنتهي</span>
+                    <span class="credit-card__holder">08/27</span>
+                  </div>
+                </div>
+              </div>
+              <div class="credit-card__face credit-card__face--back credit-card__face--mastercard">
+                <div class="credit-card__stripe" aria-hidden="true"></div>
+                <div class="credit-card__cvv-row">
+                  <span class="credit-card__signature" aria-hidden="true"></span>
+                  <div class="credit-card__cvv">
+                    <span class="credit-card__mini-label">CVV</span>
+                    <span>456</span>
+                  </div>
+                </div>
+                <p class="credit-card__disclaimer">هذه البطاقة صالحة للاستخدام من قبل حاملها فقط، ويُعد استخدامها إقرارًا بالموافقة على الشروط والأحكام الصادرة عن البنك المُصدر.</p>
+                <p class="credit-card__service">خدمة العملاء: 19700</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PayPal card (flat, non-flip) -->
+          <div class="payment-card payment-card--paypal">
+            <div class="payment-card__head">
+              <span class="payment-card__brand">PayPal</span>
+              <svg viewBox="0 0 384 512" width="20" height="27" fill="currentColor"><path d="M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"/></svg>
+            </div>
+            <p class="payment-card__label">حساب PayPal</p>
+            <p class="payment-card__email">seif@example.com</p>
+            <div class="payment-card__footer">
+              <span class="payment-card__mini-label">الحالة</span>
+              <span class="status status--done">موثق</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ---------- INCOME + ACCOUNTS COLUMN ---------- -->
+      <div class="finance-columns__middle">
+
+      <!-- ---------- INCOME VS EXPENSES ---------- -->
+      <section class="card income-expenses" aria-labelledby="ie-title">
+        <div class="card__header">
+          <h3 id="ie-title">الدخل مقابل المصروفات</h3>
+          <button type="button" class="link-btn">تحليل</button>
+        </div>
+        <ul class="chart-legend">
+          <li><span class="legend-dot legend-dot--income"></span>الدخل</li>
+          <li><span class="legend-dot legend-dot--expense"></span>المصروفات</li>
+        </ul>
+
+        <div class="bar-chart" role="img" aria-label="مخطط الدخل مقابل المصروفات لأربعة أسابيع">
+          <div class="bar-chart__group">
+            <div class="bar-chart__bars">
+              <span class="bar bar--income" style="--h:70%" title="الدخل: 3,500 جنيه"></span>
+              <span class="bar bar--expense" style="--h:48%" title="المصروفات: 2,400 جنيه"></span>
+            </div>
+            <span class="bar-chart__label">الأسبوع 1</span>
+          </div>
+          <div class="bar-chart__group">
+            <div class="bar-chart__bars">
+              <span class="bar bar--income" style="--h:85%" title="الدخل: 4,250 جنيه"></span>
+              <span class="bar bar--expense" style="--h:60%" title="المصروفات: 3,000 جنيه"></span>
+            </div>
+            <span class="bar-chart__label">الأسبوع 2</span>
+          </div>
+          <div class="bar-chart__group">
+            <div class="bar-chart__bars">
+              <span class="bar bar--income" style="--h:55%" title="الدخل: 2,750 جنيه"></span>
+              <span class="bar bar--expense" style="--h:75%" title="المصروفات: 3,750 جنيه"></span>
+            </div>
+            <span class="bar-chart__label">الأسبوع 3</span>
+          </div>
+          <div class="bar-chart__group">
+            <div class="bar-chart__bars">
+              <span class="bar bar--income" style="--h:95%" title="الدخل: 4,750 جنيه"></span>
+              <span class="bar bar--expense" style="--h:40%" title="المصروفات: 2,000 جنيه"></span>
+            </div>
+            <span class="bar-chart__label">الأسبوع 4</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- ACCOUNT SUMMARY ---------- -->
+      <section class="card account-summary" aria-labelledby="accounts-title">
+        <div class="card__header">
+          <h3 id="accounts-title">ملخص الحساب</h3>
+          <button type="button" class="link-btn">التفاصيل</button>
+        </div>
+        <ul class="account-list">
+          <li class="account-item">
+            <span class="account-icon account-icon--checking" aria-hidden="true">
+              <svg viewBox="0 0 512 512" width="19" height="19" fill="currentColor"><path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            </span>
+            <div class="account-body">
+              <p class="account-name">حساب جاري</p>
+              <span class="account-meta">بنك مصر [....4532]</span>
+            </div>
+            <p class="account-balance">8,450 جنيه</p>
+          </li>
+          <li class="account-item">
+            <span class="account-icon account-icon--savings" aria-hidden="true">
+              <svg viewBox="0 0 576 512" width="21" height="19" fill="currentColor"><path d="M400 96l0 .7c-5.3-.4-10.6-.7-16-.7H256c-16.5 0-32.5 2.1-47.8 6c-.1-2-.2-4-.2-6c0-53 43-96 96-96s96 43 96 96zm-16 32c3.5 0 7 .1 10.4 .3c4.2 .3 8.4 .7 12.6 1.3C424.6 109.1 450.8 96 480 96h11.5c10.4 0 18 9.8 15.5 19.9l-13.8 55.2c15.8 14.8 28.7 32.8 37.5 52.9H544c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32H512c-9.1 12.1-19.9 22.9-32 32v64c0 17.7-14.3 32-32 32H416c-17.7 0-32-14.3-32-32V448H256v32c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32V416c-34.9-26.2-58.7-66.3-63.2-112H68c-37.6 0-68-30.4-68-68s30.4-68 68-68h4c13.3 0 24 10.7 24 24s-10.7 24-24 24H68c-11 0-20 9-20 20s9 20 20 20H99.2c12.1-59.8 57.7-107.5 116.3-122.8c12.9-3.4 26.5-5.2 40.5-5.2H384zm64 136a24 24 0 1 0 -48 0 24 24 0 1 0 48 0z"/></svg>
+            </span>
+            <div class="account-body">
+              <p class="account-name">حساب التوفير</p>
+              <span class="account-meta">بنك مصر [....8901]</span>
+            </div>
+            <p class="account-balance">297,540 جنيه</p>
+          </li>
+          <li class="account-item">
+            <span class="account-icon account-icon--credit" aria-hidden="true">
+              <svg viewBox="0 0 576 512" width="20" height="18" fill="currentColor"><path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z"/></svg>
+            </span>
+            <div class="account-body">
+              <p class="account-name">بطاقة ائتمان</p>
+              <span class="account-meta">متاح: 1,850 جنيه من 2,500 جنيه</span>
+            </div>
+            <p class="account-balance amount--negative">-6,000 جنيه</p>
+          </li>
+        </ul>
+      </section>
+
+      </div>
+
+      <!-- ---------- BUDGET OVERVIEW ---------- -->
+      <section class="card budget" aria-labelledby="budget-title">
+        <div class="card__header">
+          <h3 id="budget-title">نظرة عامة على الميزانية</h3>
+          <button type="button" class="link-btn">التفاصيل</button>
+        </div>
+
+        <div class="budget-summary">
+          <div class="budget-summary__stats">
+            <div class="budget-stat">
+              <span class="budget-stat__label">إجمالي الميزانية</span>
+              <span class="budget-stat__value">10,000 جنيه</span>
+            </div>
+            <div class="budget-stat">
+              <span class="budget-stat__label">المستخدم</span>
+              <span class="budget-stat__value">8,250 جنيه</span>
+            </div>
+            <div class="budget-stat">
+              <span class="budget-stat__label">المتبقي</span>
+              <span class="budget-stat__value budget-stat__value--accent">1,750 جنيه</span>
+            </div>
+          </div>
+          <div class="progress progress--lg" role="progressbar" aria-valuenow="82.5" aria-valuemin="0" aria-valuemax="100" aria-label="نسبة استخدام الميزانية الإجمالية">
+            <div class="progress__bar" style="--value:82.5%"></div>
+          </div>
+          <span class="progress-percent">82.5%</span>
+        </div>
+
+        <ul class="budget-categories">
+          <li class="budget-category">
+            <div class="budget-category__head">
+              <span class="category-dot category-dot--entertainment" aria-hidden="true"></span>
+              <span class="budget-category__name">ترفيه</span>
+              <span class="budget-category__percent">50%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="ميزانية الترفيه">
+              <div class="progress__bar progress__bar--entertainment" style="--value:50%"></div>
+            </div>
+            <div class="budget-category__meta">
+              <span>المستخدم: 750 جنيه</span>
+              <span>الميزانية: 1,500 جنيه</span>
+            </div>
+          </li>
+          <li class="budget-category">
+            <div class="budget-category__head">
+              <span class="category-dot category-dot--bills" aria-hidden="true"></span>
+              <span class="budget-category__name">فواتير</span>
+              <span class="budget-category__percent budget-category__percent--full">100%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="ميزانية الفواتير">
+              <div class="progress__bar progress__bar--bills" style="--value:100%"></div>
+            </div>
+            <div class="budget-category__meta">
+              <span>المستخدم: 2,000 جنيه</span>
+              <span>الميزانية: 2,000 جنيه</span>
+            </div>
+          </li>
+          <li class="budget-category">
+            <div class="budget-category__head">
+              <span class="category-dot category-dot--care" aria-hidden="true"></span>
+              <span class="budget-category__name">العناية الشخصية</span>
+              <span class="budget-category__percent">20%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="ميزانية العناية الشخصية">
+              <div class="progress__bar progress__bar--care" style="--value:80%"></div>
+            </div>
+            <div class="budget-category__meta">
+              <span>المستخدم: 1,200 جنيه</span>
+              <span>الميزانية: 1,500 جنيه</span>
+            </div>
+          </li>
+          <li class="budget-category">
+            <div class="budget-category__head">
+              <span class="category-dot category-dot--home" aria-hidden="true"></span>
+              <span class="budget-category__name">مستلزمات المنزل</span>
+              <span class="budget-category__percent">14%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" aria-label="ميزانية مستلزمات المنزل">
+              <div class="progress__bar progress__bar--home" style="--value:86%"></div>
+            </div>
+            <div class="budget-category__meta">
+              <span>المستخدم: 4,300 جنيه</span>
+              <span>الميزانية: 5,000 جنيه</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
