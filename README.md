@@ -19,7 +19,9 @@ This repository contains all of my assignments completed during the **Route Fron
 | Assignment 02 | ✅ |
 | Assignment 03 | ✅ |
 | Assignment 04 | ✅ |
-| Assignment 05 | ⏳ |
+| Assignment 05 | ✅ |
+| Assignment 06 | ⏳ |
+
 
 ## Author
 
