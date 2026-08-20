@@ -1,4 +1,4 @@
-/* =============================================================
+/*
    TABLE OF CONTENTS
    1.  CSS Reset & Base
    2.  Typography
@@ -11,10 +11,8 @@
    9.  Related Products
    10. Footer
    11. Responsive Adjustments
-============================================================= */
-/* =============================================================
-   1. CSS RESET & BASE
-============================================================= */
+ */
+/* 1. CSS RESET & BASE */
 *,
 *::before,
 *::after {
@@ -77,9 +75,7 @@ table {
   border-collapse: collapse;
 }
 
-/* =============================================================
-   2. TYPOGRAPHY
-============================================================= */
+/* 2. TYPOGRAPHY */
 h1,
 h2,
 h3 {
@@ -108,9 +104,7 @@ p {
   color: #7c3aed;
 }
 
-/* =============================================================
-   3. LAYOUT HELPERS
-============================================================= */
+/* 3. LAYOUT HELPERS*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -136,9 +130,7 @@ p {
   font-size: 18px;
 }
 
-/* =============================================================
-   4. BUTTONS
-============================================================= */
+/* 4. BUTTONS */
 .btn {
   display: inline-block;
   border: 2px solid transparent;
@@ -212,9 +204,7 @@ p {
   color: #7c3aed;
 }
 
-/* =============================================================
-   5. FIXED NAVBAR
-============================================================= */
+/* 5. FIXED NAVBAR */
 .site-header {
   position: fixed;
   top: 0;
@@ -292,9 +282,7 @@ p {
   width: 100%;
 }
 
-/* =============================================================
-   6. HERO SECTION
-============================================================= */
+/* 6. HERO SECTION */
 .hero {
     margin-top: 120px;
     padding: 120px 0 180px;
@@ -413,9 +401,7 @@ p {
   margin-bottom: 16px;
 }
 
-/* =============================================================
-   7. SPECIFICATIONS / COMPARISON TABLE
-============================================================= */
+/* 7. SPECIFICATIONS / COMPARISON TABLE */
 .specifications {
   padding: 80px 0;
   background-color: #faf8ff;
@@ -581,9 +567,7 @@ p {
   color: #16a34a;
 }
 
-/* =============================================================
-   8. CUSTOMER REVIEWS
-============================================================= */
+/* 8. CUSTOMER REVIEWS */
 .reviews {
   padding: 80px 0;
 }
@@ -753,9 +737,7 @@ p {
   padding-top: 12px;
 }
 
-/* =============================================================
-   9. RELATED PRODUCTS
-============================================================= */
+/* 9. RELATED PRODUCTS */
 .related-products {
   padding: 80px 0;
   background-color: #faf8ff;
@@ -849,9 +831,7 @@ p {
   margin-top: 48px;
 }
 
-/* =============================================================
-   10. FOOTER
-============================================================= */
+/*  10. FOOTER */
 .site-footer {
   background-color: #101828;
   color: #d5d5df;
@@ -1005,11 +985,7 @@ p {
   display: block;
 }
 
-/* =============================================================
-   11. RESPONSIVE ADJUSTMENTS
-   Floats are stacked (not replaced with flex/grid) on smaller
-   screens so every section reads as a single column.
-============================================================= */
+/* 11. RESPONSIVE ADJUSTMENTS.*/
 @media (max-width: 900px) {
   body {
     padding-top: 76px;
