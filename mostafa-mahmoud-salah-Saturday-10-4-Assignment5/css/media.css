@@ -1,0 +1,160 @@
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .dashboard-main-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-main-grid .transactions,
+  .dashboard-main-grid .dashboard-side-stack {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --sidebar-width: 232px;
+  }
+
+  .summary-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+
+  .dashboard-grid {
+    gap: var(--space-4);
+    padding: var(--space-5);
+  }
+
+  .finance-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .finance-columns .budget {
+    grid-column: 1 / -1;
+  }
+
+  .sidebar__section-title,
+  .sidebar__brand-subtitle,
+  .quick-action span:last-child {
+    display: none;
+  }
+
+  .quick-action {
+    justify-content: center;
+  }
+
+  .nav-item__label {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    inset-inline-start: 0;
+    top: 0;
+    height: 100vh;
+    width: 84px;
+    padding: var(--space-5) var(--space-2);
+    z-index: 30;
+  }
+
+  .sidebar__brand {
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .sidebar__brand-name,
+  .sidebar__brand-subtitle {
+    display: none;
+  }
+
+  .nav-item {
+    justify-content: center;
+    padding: var(--space-3) var(--space-2);
+  }
+
+  .nav-item__label {
+    display: none;
+  }
+
+  .main {
+    margin-inline-start: 84px;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: var(--space-3) var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  .user-card__info {
+    display: none;
+  }
+
+  .user-card {
+    padding: 0;
+    border: none;
+  }
+
+  .finance-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .finance-columns .payment-methods,
+  .finance-columns .finance-columns__middle,
+  .finance-columns .budget {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    margin-inline-start: 64px;
+  }
+
+  .sidebar {
+    width: 64px;
+  }
+
+  .dashboard-grid {
+    padding: var(--space-3);
+    gap: var(--space-3);
+  }
+
+  .card {
+    padding: var(--space-4);
+  }
+
+  .header__title-row h2 {
+    font-size: 0.95rem;
+  }
+
+  .status-pill span {
+    display: none;
+  }
+
+  .summary-card__value {
+    font-size: 1.4rem;
+  }
+
+  .budget-summary__stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .bar-chart {
+    height: 120px;
+  }
+
+  .credit-card-scene {
+    aspect-ratio: 16 / 8.4;
+  }
+}

@@ -1,0 +1,172 @@
+/* ----------------------media querie for mobile and tablet --------------- */
+@media (max-width: 991.98px) {
+  .main-navbar .navbar-collapse {
+    padding-top: 16px;
+  }
+  .main-navbar .nav-link {
+    padding: 8px 0;
+  }
+  .nav-actions {
+    padding-top: 16px;
+  }
+  .hero {
+    padding: 70px 0;
+  }
+  .hero-title {
+    font-size: 46px;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .hero-image img {
+    height: 340px;
+  }
+  .players-card {
+    left: 16px;
+    bottom: 16px;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 34px;
+  }
+  .hero-image img {
+    height: 240px;
+  }
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+  }
+  .footer {
+    padding: 50px 0 24px;
+  }
+}
+/* ------------------------------- carousal mediaquerie ---------------------- */
+@media (max-width: 991.98px) {
+  .games-section {
+    padding: 70px 0;
+  }
+  .games-header h2 {
+    font-size: 38px;
+  }
+  .game-card img {
+    height: 240px;
+  }
+}
+@media (max-width: 767.98px) {
+  .games-header h2 {
+    font-size: 34px;
+  }
+  .games-controls {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 575.98px) {
+  .games-section {
+    padding: 60px 0;
+  }
+  .games-header {
+    margin-bottom: 35px;
+  }
+  .games-label span {
+    width: 35px;
+  }
+  .games-header h2 {
+    font-size: 30px;
+  }
+  .game-card img {
+    height: 230px;
+  }
+  .btn-view-games {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
+/* ---------------------- contact form responsive ---------------------------- */
+@media (max-width: 767.98px) {
+  .contact-form {
+    padding: 20px;
+  }
+  .contact-stats {
+    gap: 30px;
+  }
+}
+/* --------------------- team responsive section ----------------------------- */
+@media (max-width: 991.98px) {
+  .team-section {
+    padding: 70px 0;
+  }
+  .team-header h2 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 767.98px) {
+  .team-section {
+    padding: 60px 0;
+  }
+  .team-header {
+    margin-bottom: 35px;
+  }
+  .team-header h2 {
+    font-size: 32px;
+  }
+  .team-subtitle {
+    font-size: 14px;
+  }
+  .team-card {
+    height: 280px;
+  }
+}
+@media (max-width: 575.98px) {
+  .team-label span {
+    width: 35px;
+  }
+  .team-header h2 {
+    font-size: 28px;
+  }
+  .team-card {
+    height: 300px;
+  }
+}
+/* ---------------------------- what we do responsive ------------------------ */
+@media (max-width: 991.98px) {
+  .what-we-do-section {
+    padding: 70px 0;
+  }
+  .what-we-do-header h2 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 767.98px) {
+  .what-we-do-section {
+    padding: 60px 0;
+  }
+  .what-we-do-header {
+    margin-bottom: 40px;
+  }
+  .what-we-do-header h2 {
+    font-size: 32px;
+  }
+  .what-we-do-label span {
+    width: 40px;
+  }
+  .service-card,
+  .service-image-card {
+    height: 240px;
+  }
+}
+@media (max-width: 575.98px) {
+  .what-we-do-header h2 {
+    font-size: 28px;
+  }
+  .what-we-do-label p {
+    font-size: 12px;
+  }
+  .service-card,
+  .service-image-card {
+    height: 220px;
+  }
+}
