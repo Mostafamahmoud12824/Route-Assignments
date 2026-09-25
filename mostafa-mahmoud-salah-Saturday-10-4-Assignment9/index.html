@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ContactHub</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- style file and media querie -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+  <!--================== Navbar =====================-->
+  <nav class="nav-bar bg-white py-3 mb-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo d-flex align-items-center gap-2">
+        <div class="logo-icon text-white d-flex justify-content-center align-items-center"><i class="fa-solid fa-address-book"></i></div>
+        <div>
+          <h1 class="logo-title fw-bold m-0">Contact<span>Hub</span></h1>
+          <small class="d-none d-sm-block">Smart Contact Manager</small>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2 gap-md-3">
+        <button class="add-btn text-white border-0 fw-semibold px-3 px-sm-4 py-2" onclick="openAddModal()">
+          <i class="fa-solid fa-plus me-2"></i>Add Contact
+        </button>
+        <button class="icon-btn bg-transparent border-0 d-none d-md-inline-block"><i class="fa-solid fa-bell"></i></button>
+        <button class="icon-btn bg-transparent border-0 d-none d-md-inline-block"><i class="fa-solid fa-gear"></i></button>
+        <img src="images/profile.jpg" class="profile-img object-fit-cover" alt="profile">
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!--  3 stats section -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <div class="stat-card bg-white rounded-4 p-3 d-flex align-items-center gap-3">
+          <div class="stat-icon blue text-white d-flex justify-content-center align-items-center"><i class="fa-solid fa-users"></i></div>
+          <div>
+            <small>TOTAL</small>
+            <h3 class="fw-bold m-0" id="totalCount">0</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card bg-white rounded-4 p-3 d-flex align-items-center gap-3">
+          <div class="stat-icon orange text-white d-flex justify-content-center align-items-center"><i class="fa-solid fa-star"></i></div>
+          <div>
+            <small>FAVORITES</small>
+            <h3 class="fw-bold m-0" id="favoriteCount">0</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card bg-white rounded-4 p-3 d-flex align-items-center gap-3">
+          <div class="stat-icon red text-white d-flex justify-content-center align-items-center"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div>
+            <small>EMERGENCY</small>
+            <h3 class="fw-bold m-0" id="emergencyCount">0</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!--============== all contacts section =======================-->
+      <div class="col-lg-8">
+        <h2 class="section-title fw-bold mb-2">All Contacts</h2>
+        <p class="section-text mb-4">Manage and organize your <span id="contactsNumber">0</span> contacts</p>
+
+        <div class="search-box position-relative mb-4">
+          <i class="fa-solid fa-magnifying-glass position-absolute"></i>
+          <input class="w-100" id="searchInput" type="text" placeholder="Search by name, phone, or email...">
+        </div>
+
+        <div class="row g-3" id="contactsContainer"></div>
+      </div>
+
+      <!--================ favorites and emergency section ===========================-->
+      <div class="col-lg-4">
+        <div class="side-card bg-white mb-4 overflow-hidden">
+          <div class="side-header fav-header d-flex align-items-center gap-3 p-3">
+            <div class="side-icon orange text-white d-flex justify-content-center align-items-center"><i class="fa-solid fa-star"></i></div>
+            <div>
+              <h5 class="fw-semibold m-0">Favorites</h5>
+              <small>Quick access to starred contacts</small>
+            </div>
+          </div>
+          <div class="p-3" id="favoritesBox"></div>
+        </div>
+
+        <div class="side-card bg-white mb-4 overflow-hidden">
+          <div class="side-header emergency-header d-flex align-items-center gap-3 p-3">
+            <div class="side-icon red text-white d-flex justify-content-center align-items-center"><i class="fa-solid fa-heart-pulse"></i></div>
+            <div>
+              <h5 class="fw-semibold m-0">Emergency</h5>
+              <small>Important contacts for urgent calls</small>
+            </div>
+          </div>
+          <div class="p-3" id="emergencyBox"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!--==================== (Add - Edit) form  =================-->
+  <div class="modal fade" id="contactModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content border-0 rounded-4">
+        <div class="modal-header modal-top px-4 py-3">
+          <h5 class="modal-title fw-bold" id="modalTitle">Add New Contact</h5>
+          <button type="button" class="close-btn bg-transparent border-0" data-bs-dismiss="modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="modal-body px-4 pt-3 pb-4">
+          <form id="contactForm">
+            <div class="d-flex flex-column align-items-center gap-3 mb-3">
+              <div class="photo-preview rounded-circle text-white d-flex justify-content-center align-items-center overflow-hidden" id="photoPreview">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <label for="photo" class="photo-btn fw-medium rounded-3 px-3 py-1">
+                <i class="fa-solid fa-camera"></i> Change Photo
+              </label>
+              <input id="photo" type="file" accept="image/*" hidden>
+            </div>
+
+            <label class="form-label input-label fw-medium" for="name">Full Name <span class="required">*</span></label>
+            <input id="name" class="form-control input-box mb-3" type="text" placeholder="Enter full name" required>
+
+            <label class="form-label input-label fw-medium" for="phone">Phone Number <span class="required">*</span></label>
+            <input id="phone" class="form-control input-box mb-3" type="tel" placeholder="e.g., 01012345678" required>
+
+            <label class="form-label input-label fw-medium" for="email">Email Address</label>
+            <input id="email" class="form-control input-box mb-3" type="email" placeholder="name@example.com">
+
+            <label class="form-label input-label fw-medium" for="address">Address</label>
+            <input id="address" class="form-control input-box mb-3" type="text" placeholder="Enter address">
+
+            <label class="form-label input-label fw-medium" for="group">Group</label>
+            <select id="group" class="form-select input-box mb-3">
+              <option value="">Select a group</option>
+              <option value="Family">Family</option>
+              <option value="Friends">Friends</option>
+              <option value="Work">Work</option>
+              <option value="School">School</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <label class="form-label input-label fw-medium" for="notes">Notes</label>
+            <textarea id="notes" class="form-control input-box mb-3" rows="2" placeholder="Add notes about this contact"></textarea>
+
+            <div class="d-flex gap-3 mt-1 mb-4">
+              <label class="check-item d-flex align-items-center gap-2">
+                <input type="checkbox" id="favorite">
+                <i class="fa-solid fa-star text-warning"></i> Favorite
+              </label>
+              <label class="check-item d-flex align-items-center gap-2">
+                <input type="checkbox" id="emergency">
+                <i class="fa-solid fa-heart-pulse text-danger"></i> Emergency
+              </label>
+            </div>
+
+            <div class="d-flex gap-3">
+              <button type="button" class="cancel-btn border-0 fw-semibold" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="save-btn text-white border-0 fw-semibold"><i class="fa-solid fa-check me-2"></i>Save Contact</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
