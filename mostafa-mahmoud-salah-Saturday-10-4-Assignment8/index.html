@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>what's for Dinner</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- style file and media querie -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+  </head>
+  <body>
+    <!-- =========================== navbar ==================== -->
+<nav class="navbar bg-white py-2 border-bottom mb-4 w-100">
+
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <div class="d-flex align-items-center gap-2">
+      <div
+        class="d-flex align-items-center justify-content-center"
+        style="width: 50px; height: 50px; background: linear-gradient(135deg, #ff7a00, #ff4d2e); border-radius: 50%;"
+      >
+        <i class="fa-solid fa-utensils" style="color: white; font-size: 12px;"></i>
+      </div>
+
+      <div class="lh-sm">
+        <a class="navbar-brand fw-bold text-dark " href="#" style="font-size: 20px; line-height: 1;">
+          What’s For Dinner
+        </a>
+        <div class="text-muted" style="font-size: 20px; margin-top: -2px;">
+          Your daily meal inspiration
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <a href="#" class="text-dark"><i class="fa-solid fa-house"style = "font-size: 24px;"></i></a>
+      <a href="#" class="text-dark"><i class="fa-solid fa-gear"style = "font-size: 24px;"></i></a>
+      <a href="#">
+        <img
+          src="./images/profile.jpg"
+          alt="Profile"
+          style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;"
+        />
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+
+    <!-- ====================== Main card ===================== -->
+    <main class="card">
+      <div class="card-left">
+        <div class="image-box">
+          <img
+            id="mealImage"
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80"
+            alt="Quinoa veggie salad bowl"
+          />
+
+          <span class="rating"
+            >⭐ <span id="rate">4.8 (256 reviews)</span></span
+          >
+
+          <div class="stats">
+            <div class="stat">
+              <i
+                class="fa-regular fa-clock"
+                style="color: rgb(217, 84, 42); font-size: 24px"
+              ></i>
+              <p class="stat-label">Prep Time</p>
+              <p class="stat-value" id="prepTime">15 min</p>
+            </div>
+            <div class="stat">
+              <i
+                class="fa-solid fa-fire-burner"
+                style="color: rgb(221, 13, 13); font-size: 24px"
+              ></i>
+              <p class="stat-label">Cook Time</p>
+              <p class="stat-value" id="cookTime">60 min</p>
+            </div>
+            <div class="stat">
+              <i
+                class="fa-solid fa-users"
+                style="color: rgb(20, 111, 183); font-size: 24px"
+              ></i>
+              <p class="stat-label">Servings</p>
+              <p class="stat-value" id="serves">4 people</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------ Right column ---------->
+      <div class="card-right">
+        <div class="tags">
+          <span class="tag tag-green" id="mealDifficulty">Intermediate</span>
+          <span class="tag tag-blue" id="cuisine">Asian</span>
+        </div>
+
+        <h1 class="title" id="mealName">Quinoa Veggie Salad</h1>
+        <p class="description" id="mealDescription">
+          A light yet filling bowl of fluffy quinoa, crunchy vegetables and
+          tangy feta, finished with a fresh lemon dressing.
+        </p>
+        <div
+          class="prep-alert d-flex align-items-center gap-3 rounded-3"
+          id="warning"
+          role="alert"
+        >
+          <i class="fa-solid fa-triangle-exclamation prep-alert-icon"></i>
+          <div>
+            <p class="prep-alert-title fw-semibold">
+              Extended Preparation Time
+            </p>
+            <p class="prep-alert-text">
+              This recipe requires more than 45 minutes to prepare. Plan
+              accordingly!
+            </p>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+          <button class="tab active" data-target="ingredients">
+            Ingredients
+          </button>
+          <button class="tab" data-target="instructions">Instructions</button>
+          <button class="tab" data-target="nutrition">Nutrition</button>
+          <button class="tab" data-target="tips">Chef's Tips</button>
+        </div>
+
+        <!--  ========== Ingredients tap  ==========  -->
+        <div class="tab-content active" id="ingredients">
+          <ul class="ingredient-panel" id="ingredientsList">
+            <li class="ingredient">
+              <span class="ingredient-number">1</span> 200g rice noodles
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-number">2</span> 200g shrimp, peeled
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-number">3</span> 2 eggs
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-number">4</span> 3 tablespoons tamarind
+              paste
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-number">5</span> 2 tablespoons fish sauce
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-number">6</span> 1 tablespoon palm sugar
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-number">7</span> Bean sprouts
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-number">8</span> Crushed peanuts
+            </li>
+            <li class="ingredient">
+              <span class="ingredient-number">9</span> Lime wedges and cilantro
+            </li>
+          </ul>
+        </div>
+        <!--  ========== Instruction tap  ==========  -->
+        <div class="tab-content" id="instructions">
+          <ul class="list" id="instructionsList">
+            <li class="item">
+              <span class="number">1</span> Cook the quinoa according to the
+              package, then let it cool.
+            </li>
+            <li class="item">
+              <span class="number">2</span> Dice the cucumber, pepper and
+              tomatoes into small pieces.
+            </li>
+            <li class="item">
+              <span class="number">3</span> Mix the quinoa with the vegetables
+              and feta in a large bowl.
+            </li>
+            <li class="item">
+              <span class="number">4</span> Whisk olive oil, lemon juice and
+              salt, then pour over the salad.
+            </li>
+          </ul>
+        </div>
+
+        <!-- ================= nutrition  tap ====================  -->
+        <div class="tab-content" id="nutrition">
+          <div class="nutrition" id="nutritionList">
+            <div class="nutrition-box">
+              <i
+                class="fa-solid fa-fire"
+                style="color: rgb(240, 121, 11); font-size: 24px"
+              ></i>
+              <p class="nutrition-label">Calories</p>
+              <p class="nutrition-value">340kcal</p>
+            </div>
+            <div class="nutrition-box">
+              <i
+                class="fa-solid fa-dumbbell"
+                style="color: rgb(20, 111, 183); font-size: 24px"
+              ></i>
+              <p class="nutrition-label">Protein</p>
+              <p class="nutrition-value">12g</p>
+            </div>
+            <div class="nutrition-box">
+              <i
+                class="fa-solid fa-carrot"
+                style="color: rgb(233, 218, 10); font-size: 24px"
+              ></i>
+              <p class="nutrition-label">Carbs</p>
+              <p class="nutrition-value">41g</p>
+            </div>
+            <div class="nutrition-box">
+              <i
+                class="fa-solid fa-droplet"
+                style="color: rgb(206, 18, 18); font-size: 24px"
+              ></i>
+              <p class="nutrition-label">Fat</p>
+              <p class="nutrition-value">14g</p>
+            </div>
+          </div>
+        </div>
+
+        <!--  ========== Chef's Tips tap  ==========  -->
+        <div class="tab-content" id="tips">
+          <div class="d-grid gap-3" id="tipsList">
+            <div
+              class="bg-light rounded-3 p-3 border-start border-4 border-warning shadow-sm d-flex align-items-center gap-3"
+            >
+              <div
+                class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center"
+                style="width: 20px; height: 20px; font-size: 12px"
+              >
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-muted small"
+                >Patience is key - don't rush the onion caramelization</span
+              >
+            </div>
+
+            <div
+              class="bg-light rounded-3 p-3 border-start border-4 border-warning shadow-sm d-flex align-items-center gap-3"
+            >
+              <div
+                class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center"
+                style="width: 20px; height: 20px; font-size: 12px"
+              >
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-muted small"
+                >Use good quality beef broth for best flavor</span
+              >
+            </div>
+
+            <div
+              class="bg-light rounded-3 p-3 border-start border-4 border-warning shadow-sm d-flex align-items-center gap-3"
+            >
+              <div
+                class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center"
+                style="width: 20px; height: 20px; font-size: 12px"
+              >
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-muted small"
+                >Gruyère can be substituted with Swiss cheese</span
+              >
+            </div>
+
+            <div
+              class="bg-light rounded-3 p-3 border-start border-4 border-warning shadow-sm d-flex align-items-center gap-3"
+            >
+              <div
+                class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center"
+                style="width: 20px; height: 20px; font-size: 12px"
+              >
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-muted small"
+                >Watch carefully when broiling to avoid burning</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <button class="button-recipe" id="randomRecipe">
+          Try Another Recipe
+        </button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

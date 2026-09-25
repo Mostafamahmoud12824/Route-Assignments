@@ -1,0 +1,89 @@
+/* ========== Tablet  responsive ========== */
+@media (max-width: 990px) {
+  body {
+    padding: 20px;
+  }
+
+  .card-right {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .tab {
+    font-size: 13px;
+  }
+}
+
+/* ========== Mobile responsive  ========== */
+@media (max-width: 768px) {
+.card {
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 24px;
+  }
+
+.card-left,.card-right {
+    width: 100%;
+  }
+
+.image-box {
+    min-height: 340px;
+  }
+
+.card-right {
+    padding: 22px 8px 8px;
+  }
+
+.button-recipe {
+    margin-top: 20px;
+  }
+
+.tabs {
+    overflow-x: auto;
+  }
+
+.tab {
+    margin-right: 18px;
+    margin-bottom: 0; 
+    font-size: 14px;
+  }
+
+.ingredient-panel {
+    padding: 14px 16px;
+  }
+
+.prep-alert {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+  }
+
+.nutrition-box {
+    width: 48%;
+  }
+}
+
+/* ========== Small phones ========== */
+@media (max-width: 480px) {
+  body {
+    padding: 14px;
+  }
+
+  .image-box {
+    min-height: 280px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  .stat-value {
+    font-size: 15px;
+  }
+}
