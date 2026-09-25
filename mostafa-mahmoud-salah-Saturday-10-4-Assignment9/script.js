@@ -1,4 +1,4 @@
-var contacts = [];
+var contacts = JSON.parse(localStorage.getItem("contacts")) || [];
 var editIndex = -1;
 var photoData = "";
 var form = document.getElementById("contactForm");
@@ -31,8 +31,13 @@ function showPhotoPreview() {
 photoInput.addEventListener("change", function () {
   var file = photoInput.files[0];
   if (file) {
-    photoData = URL.createObjectURL(file);
-    showPhotoPreview();
+    // Read the photo as base64 so it can be saved in localStorage
+    var reader = new FileReader();
+    reader.onload = function () {
+      photoData = reader.result;
+      showPhotoPreview();
+    };
+    reader.readAsDataURL(file);
   }
 });
 
@@ -225,6 +230,13 @@ function openAddModal() {
   modal.show();
 }
 
+function savetolocalStorage() {
+  localStorage.setItem("contacts", JSON.stringify(contacts));
+}
+function deletefromlocalStorage() {
+  localStorage.removeItem("contacts");
+}
+
 // Add or update contact
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -247,6 +259,7 @@ form.addEventListener("submit", function (e) {
     contacts[editIndex] = contact;
   }
 
+  savetolocalStorage();
   clearForm();
   modal.hide();
   displayContacts();
@@ -273,14 +286,17 @@ function editContact(index) {
 
 function deleteContact(index) {
   contacts.splice(index, 1);
+  savetolocalStorage();
   displayContacts();
 }
 function toggleFavorite(index) {
   contacts[index].favorite = !contacts[index].favorite;
+  savetolocalStorage();
   displayContacts();
 }
 function toggleEmergency(index) {
   contacts[index].emergency = !contacts[index].emergency;
+  savetolocalStorage();
   displayContacts();
 }
 searchInput.addEventListener("input", displayContacts);
