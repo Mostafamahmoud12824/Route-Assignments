@@ -21,7 +21,7 @@ This repository contains all of my assignments completed during the **Route Fron
 | Assignment 04 | ✅ |
 | Assignment 05 | ✅ |
 | Assignment 06 | ✅ |
-| Assignment 07 | ⏳ |
+| Assignment 07 | solve problems in site aboute js |
 
 
 ## Author
