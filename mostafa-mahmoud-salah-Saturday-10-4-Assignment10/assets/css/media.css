@@ -1,0 +1,10 @@
+@media (min-width: 992px) {
+  .main-nav .nav-link {
+    border-bottom: 2px solid transparent;
+  }
+
+  .main-nav .nav-link:hover,
+  .main-nav .nav-link.active {
+    border-bottom-color: var(--primary);
+  }
+}
