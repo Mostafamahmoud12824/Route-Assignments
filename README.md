@@ -23,8 +23,8 @@ This repository contains all of my assignments completed during the **Route Fron
 | Assignment 06 | ✅ |
 | Assignment 07 | solve problems in site aboute js |
 | Assignment 08 | ✅ |
-
-
+| Assignment 09| ✅ |
+| Assignment 10 | ✅ |
 
 ## Author
 
